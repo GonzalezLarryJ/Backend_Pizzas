@@ -1,0 +1,30 @@
+### Consulta de tamaños de pizzas.
+GET http://localhost:3000/api/tamanio/
+
+### Consultar por Id.
+GET http://localhost:3000/api/tamanio/3
+
+###Insertar un tamanio
+POST http://localhost:3000/api/tamanio/
+Content-Type: application/json
+
+{
+    "nombreTam":"slice",
+    "descripcionTam":"tamaño de una pieza",
+    "diametro":"40cm",
+    "imagenTam":"c:/img/tamanio"
+}
+
+### Editar un tamaño
+PUT http://localhost:3000/api/tamanio/6
+Content-Type: application/json
+
+{
+    "nombreTam": "Para borrar",
+    "descripcionTam": "tamaño de una pieza",
+    "diametro": "40cm",
+    "imagenTam":"https://img.freepik.com/fotos-premium/diseno-boceto-negro-rebanada-pizza-arte-generativo-ai_351967-817.jpg"
+}
+
+### Eliminar tamaño de pizza
+DELETE http://localhost:3000/api/tamanio/7

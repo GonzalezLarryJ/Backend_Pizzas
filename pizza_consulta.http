@@ -1,0 +1,34 @@
+### Consultar pizzas
+GET http://localhost:3000/api/pizza/
+
+
+### consultar pizza por id
+GET http://localhost:3000/api/pizza/1
+
+
+### Crear registro de Pizzas
+POST http://localhost:3000/api/pizza/
+Content-Type: application/json
+
+{
+    "Imagen":"c:/",
+    "Nombre":"Pizza con Jamón y queso",
+    "Descripcion":"Pizza de prueba con anchoas",
+    "Precio": 15.84,
+    "tamanio_id":2
+}
+
+### Editar pizza
+PUT http://localhost:3000/api/pizza/4
+Content-Type: application/json
+
+{
+    "Imagen":"d:/",
+    "Nombre":"Pizza de prueba con anchoas",
+    "Descripcion":"Pizza de prueba",
+    "Precio": 15.99,
+    "tamanio_id":2  
+}
+
+### borrar pizza por Id
+DELETE http://localhost:3000/api/pizza/4

@@ -1,0 +1,30 @@
+### Consultar todos los registros
+GET http://localhost:3000/api/topping/
+
+### Cosultar por Id.
+GET http://localhost:3000/api/topping/10
+
+### Crear un nuevo registro
+POST  http://localhost:3000/api/topping/
+Content-Type: application/json
+
+{
+    "nombreT":"para borrar tres",
+    "descripcionT":"Ración de jamón extra",
+    "imagenT":"c:/img",
+    "precio":10.10
+}
+
+### Editar  topping
+PUT http://localhost:3000/api/topping/7 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombreT":"editado de nuevo",
+    "descripcionT":"Ración de jamón extra",
+    "imagenT":"c:/img",
+    "precio":10.10
+}
+
+### Borrar topping por Id
+DELETE http://localhost:3000/api/topping/10
