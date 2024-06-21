@@ -1,0 +1,33 @@
+### consulta de clientes
+GET  http://localhost:3000/api/cliente/
+
+### consultar cliente por Id
+GET http://localhost:3000/api/cliente/2
+
+### crear clientes
+POST http://localhost:3000/api/cliente/
+Content-Type: application/json
+
+{
+   "nombre":"para borrar",
+   "apellido":"borrame",
+   "direccion":"CABA -expero",
+   "telefono":"1150521454",
+   "email":"luis@gmail.com" 
+}
+
+###editar cliente
+PUT http://localhost:3000/api/cliente/3
+Content-Type: application/json
+
+{
+    "nombre":"Yelitza Maria",
+   "apellido":"Mendoza",
+   "direccion":"CABA.San Isidro Argentina",
+   "telefono":"1150521454",
+   "email":"yeli@gmail.com"  
+}
+
+
+### Borrar cliente
+DELETE http://localhost:3000/api/cliente/4
