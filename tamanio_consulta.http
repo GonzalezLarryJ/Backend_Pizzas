@@ -9,10 +9,12 @@ POST http://localhost:3000/api/tamanio/
 Content-Type: application/json
 
 {
-    "nombreTam":"slice",
-    "descripcionTam":"tamaño de una pieza",
-    "diametro":"40cm",
-    "imagenTam":"c:/img/tamanio"
+    "nombreTam": "Para borrar",
+    "descripcionTam": "tamaño de una pieza",
+    "diametro": "40cm",
+    "imagenTam": "https://img.freepik.com/fotos-premium/diseno-boceto-negro-rebanada-pizza-arte-generativo-ai_351967-817.jpg",
+    "activo": 1,
+    "fecha_crea": "2024-06-21"
 }
 
 ### Editar un tamaño

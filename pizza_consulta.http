@@ -12,14 +12,15 @@ Content-Type: application/json
 
 {
     "Imagen":"c:/",
-    "Nombre":"Pizza con Jamón y queso",
+    "Nombre":"Pizza borrona",
     "Descripcion":"Pizza de prueba con anchoas",
     "Precio": 15.84,
-    "tamanio_id":2
+    "tamanio_id":2,
+    "fecha_creada":"2024-06-21"
 }
 
 ### Editar pizza
-PUT http://localhost:3000/api/pizza/4
+PUT http://localhost:3000/api/pizza/5
 Content-Type: application/json
 
 {
@@ -27,8 +28,9 @@ Content-Type: application/json
     "Nombre":"Pizza de prueba con anchoas",
     "Descripcion":"Pizza de prueba",
     "Precio": 15.99,
-    "tamanio_id":2  
+    "tamanio_id":2,
+    "fecha_creada":"2024-06-21"  
 }
 
 ### borrar pizza por Id
-DELETE http://localhost:3000/api/pizza/4
+DELETE http://localhost:3000/api/pizza/7

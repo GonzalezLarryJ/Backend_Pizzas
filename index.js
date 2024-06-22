@@ -8,6 +8,7 @@ const routeTamanio = require('./routes/tamanioRoutes');
 const routeTopping = require('./routes/toppingRoutes');
 const routePizza = require('./routes/pizzaRoutes');
 const routeCliente = require('./routes/clienteRoutes');
+const routeRPT = require('./routes/relacion_pizza_toppingRoutes');
 
 //middleware
 const app = express();
@@ -24,6 +25,8 @@ app.use('/api/tamanio',routeTamanio);
 app.use('/api/topping',routeTopping);
 app.use('/api/pizza',routePizza);
 app.use('/api/cliente',routeCliente);
+app.use('/api/relacionPizzaTopping',routeRPT);
+
 
 app.get('/',(req,res)=>{
     res.send('Hola, mundo...!')
