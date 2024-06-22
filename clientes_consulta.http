@@ -13,19 +13,23 @@ Content-Type: application/json
    "apellido":"borrame",
    "direccion":"CABA -expero",
    "telefono":"1150521454",
-   "email":"luis@gmail.com" 
+   "email":"luis@gmail.com",
+   "activo":1,
+   "fecha_registro":"2022-12-31" 
 }
 
 ###editar cliente
-PUT http://localhost:3000/api/cliente/3
+PUT http://localhost:3000/api/cliente/2
 Content-Type: application/json
 
 {
-    "nombre":"Yelitza Maria",
-   "apellido":"Mendoza",
-   "direccion":"CABA.San Isidro Argentina",
-   "telefono":"1150521454",
-   "email":"yeli@gmail.com"  
+   "nombre": "Juana",
+   "apellido": "Mendez",
+   "direccion": "CABA. Argentina",
+   "telefono": "1150521454",
+   "email": "juana@gmail.com",
+   "activo": 1,
+   "fecha_registro":"2022-12-31"   
 }
 
 

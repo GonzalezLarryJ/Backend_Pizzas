@@ -23,9 +23,9 @@ exports.getPizza = async(id)=>{
 
 exports.createPizza = async(pizza)=>{
     try {
-        const{Imagen,Nombre,Descripcion,Precio,tamanio_id}=pizza;
-        const query = 'insert into Pizza (Imagen,Nombre,Descripcion,Precio,tamanio_id) value (?,?,?,?,?)';
-        const [result] = await pool.query(query,[Imagen,Nombre,Descripcion,Precio,tamanio_id]);
+        const{Imagen,Nombre,Descripcion,Precio,tamanio_id,fecha_creada}=pizza;
+        const query = 'insert into Pizza (Imagen,Nombre,Descripcion,Precio,tamanio_id,fecha_creada) value (?,?,?,?,?,?)';
+        const [result] = await pool.query(query,[Imagen,Nombre,Descripcion,Precio,tamanio_id,fecha_creada]);
         console.log('Pizza insertada correctamente');
         console.log(result);
         return result;
@@ -36,9 +36,9 @@ exports.createPizza = async(pizza)=>{
 
 exports.editPizza = async(id, pizza)=>{
     try {
-        const{Imagen,Nombre,Descripcion,Precio,tamanio_id}= pizza;
-        const query = `update Pizza set Imagen = ?,Nombre = ?,Descripcion = ?,Precio = ?,tamanio_id = ? where idPizza = ${id}`;
-        const [result] = await pool.query(query,[Imagen,Nombre,Descripcion,Precio,tamanio_id]);
+        const{Imagen,Nombre,Descripcion,Precio,tamanio_id,fecha_creada}= pizza;
+        const query = `update Pizza set Imagen = ?,Nombre = ?,Descripcion = ?,Precio = ?,tamanio_id = ?,fecha_creada=? where idPizza = ${id}`;
+        const [result] = await pool.query(query,[Imagen,Nombre,Descripcion,Precio,tamanio_id,fecha_creada]);
         console.log('Pizza editada correctamente');
         return result;
     } catch (error) {

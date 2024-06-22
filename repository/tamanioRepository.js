@@ -23,9 +23,9 @@ exports.getUnTamanio = async(id)=>{
 
 exports.createTamanio = async(tamanio)=>{
     try {
-        const {nombreTam,descripcionTam,diametro,imagenTam} = tamanio;
-        const query = `insert into Tamanio_Pizza(nombreTam,descripcionTam,diametro,imagenTam) values(?,?,?,?)`;
-        const [result] = await pool.query(query,[nombreTam,descripcionTam,diametro,imagenTam]);
+        const {nombreTam,descripcionTam,diametro,imagenTam, activo,fecha_crea} = tamanio;
+        const query = `insert into Tamanio_Pizza(nombreTam,descripcionTam,diametro,imagenTam,activo,fecha_crea) values(?,?,?,?,?,?)`;
+        const [result] = await pool.query(query,[nombreTam,descripcionTam,diametro,imagenTam,activo,fecha_crea]);
         console.log('Tamaño insertado correctamente');
         console.log(result);
         return result
@@ -36,9 +36,9 @@ exports.createTamanio = async(tamanio)=>{
 
 exports.editTamanio = async(id, tamanio)=>{
     try {
-        const {nombreTam,descripcionTam,diametro,imagenTam} = tamanio;
-        const query = `update Tamanio_Pizza set nombreTam = ?,descripcionTam = ?,diametro = ?,imagenTam = ? where tamanio_Id = ${id}`;
-        const [result] = await pool.query(query,[nombreTam,descripcionTam,diametro,imagenTam]);
+        const {nombreTam,descripcionTam,diametro,imagenTam,activo,fecha_crea} = tamanio;
+        const query = `update Tamanio_Pizza set nombreTam = ?,descripcionTam = ?,diametro = ?,imagenTam = ?,activo=?,fecha_crea=? where tamanio_Id = ${id}`;
+        const [result] = await pool.query(query,[nombreTam,descripcionTam,diametro,imagenTam,activo,fecha_crea]);
         console.log('Tamaño editado correctamente');
         return result;
     } catch (error) {
