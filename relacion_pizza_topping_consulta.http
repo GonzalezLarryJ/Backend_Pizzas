@@ -1,2 +1,28 @@
 ### consultar relaciones entre pizzas y topping
 GET http://localhost:3000/api/relacionPizzaTopping/
+
+### Consultar relaciones entre pizza y topping por Id
+GET http://localhost:3000/api/relacionPizzaTopping/1
+
+
+### Crear relación entre pizza y topping
+POST http://localhost:3000/api/relacionPizzaTopping/
+Content-Type: application/json
+
+{
+    "id_pizza":1,
+    "id_topping":3
+}
+
+###Editar relación entre pizzas y topping
+PUT http://localhost:3000/api/relacionPizzaTopping/3
+Content-Type: application/json
+
+{
+    "id_pizza":1,
+    "id_topping":1
+}
+
+### Eliminar relacion por Id
+DELETE http://localhost:3000/api/relacionPizzaTopping/3
+
