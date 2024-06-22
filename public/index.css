@@ -1,23 +1,84 @@
-.container {
-    display: flex;
-}
-aside {
-    width: 15%;
-    margin: 15px;
-}
-section {
-        width: 80%;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 20px;
-        margin: 5px;
-}
-.card {
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 5px;
+/* Font Awesome */
+.fas {
+  padding-right: 0.3em;
 }
 
-.flex {
-    display: flex;
+/* CRUD Body */
+.crud-body {
+  font-family: Arial, sans-serif;
+  background-color: #074990;
+  padding: 1.5em;
+  margin: 0;
+}
+
+/* CRUD Container */
+.crud-container {
+  width: 60vw;
+  padding: 3em;
+  margin: auto;
+  background: #fff;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+}
+
+/* CRUD Tabla */
+.crud-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5em;
+}
+
+.crud-tabla,
+.crud-tabla-th,
+.crud-tabla-td {
+  border: 0.1em solid #ddd;
+  padding: 1.2em;
+  text-align: left;
+}
+
+.crud-tabla-th {
+  background-color: #f2f2f2;
+}
+
+/* Nav */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Botones */
+#crear-btn {
+  background-color: #0056b3;
+}
+
+#eliminar-btn {
+  background-color: #e25c50;
+}
+
+#modificar-btn {
+  background-color: #70c87d;
+  color: #2d2d2d;
+}
+
+#volver-btn {
+  background-color: #eeee6c;
+  color: #2d2d2d;
+}
+
+.navbar-btn {
+  border-radius: 2em;
+  font-size: 1em;
+  padding: 0.6em 1.4em;
+  margin: 2em 0.5em;
+  border: none;
+  color: #ffffff;
+}
+
+.table-btn {
+  font-size: 1em;
+  border-radius: 2em;
+  padding: 0.6em 1.4em;
+  width: 100%;
+  border: none;
+  color: #2d2d2d;
 }

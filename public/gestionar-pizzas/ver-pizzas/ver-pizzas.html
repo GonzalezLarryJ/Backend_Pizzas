@@ -3,35 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gestión de Pizzas</title>
-    <link rel="stylesheet" href="./ver-pizzas.css" />
+    <link rel="icon" type="image/x-icon" href="../../assets/logo.ico" />
+    <link rel="stylesheet" href="../../index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>PizzARG | Pizzas</title>
   </head>
-  <body>
-    <div class="container">
-      <h1>Gestión de Pizzas</h1>
-      <table id="pizzaTable">
+  <body class="crud-body">
+    <main class="crud-container">
+      <nav>
+        <div class="navbar">
+          <div class="navbar-izquierdo">
+            <button
+              class="navbar-btn"
+              id="crear-btn"
+              onclick="window.location.href='../crear-pizza/crear-pizza.html'"
+            >
+              <i class="fas fa-plus"></i> Crear Pizza
+            </button>
+            <button
+              class="navbar-btn"
+              id="eliminar-btn"
+              onclick="window.location.href='../eliminar-pizza/eliminar-pizza.html'"
+            >
+              <i class="fas fa-trash"></i> Eliminar Pizza
+            </button>
+          </div>
+          <div class="navbar-derecho">
+            <button
+              class="navbar-btn"
+              id="volver-btn"
+              onclick="window.location.href='../../index.html'"
+            >
+              <i class="fas fa-arrow-left"></i> Volver
+            </button>
+          </div>
+        </div>
+      </nav>
+      <table class="crud-tabla" id="pizzaTable">
         <thead>
-          <tr>
-            <th>Nombre</th>
-            <th>Descripción</th>
-            <th>Precio</th>
-            <th>Tamaño ID</th>
-            <th>Acciones</th>
+          <tr class="crud-tabla-tr">
+            <th class="crud-tabla-th">Nombre</th>
+            <th class="crud-tabla-th">Descripción</th>
+            <th class="crud-tabla-th">Precio</th>
+            <th class="crud-tabla-th">Medida</th>
+            <th class="crud-tabla-th"></th>
           </tr>
         </thead>
         <tbody></tbody>
       </table>
-      <button onclick="window.location.href='../crear-pizza/crear-pizza.html'">
-        Crear Pizza
-      </button>
-
-      <button onclick="window.location.href='../eliminar-pizza/eliminar-pizza.html'">
-        Eliminar Pizza
-      </button>
-      <button onclick="window.location.href='../../index.html'">
-        Volver
-      </button>
-    </div>
+    </main>
     <script src="./ver-pizzas.js"></script>
   </body>
 </html>
