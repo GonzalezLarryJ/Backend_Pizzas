@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Pizzas</title>
+    <link rel="stylesheet" href="./ver-pizzas.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Gestión de Pizzas</h1>
+      <table id="pizzaTable">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Tamaño ID</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <button onclick="window.location.href='../crear-pizza/crear-pizza.html'">
+        Crear Pizza
+      </button>
+
+      <button onclick="window.location.href='../eliminar-pizza/eliminar-pizza.html'">
+        Eliminar Pizza
+      </button>
+      <button onclick="window.location.href='../../index.html'">
+        Volver
+      </button>
+    </div>
+    <script src="./ver-pizzas.js"></script>
+  </body>
+</html>
