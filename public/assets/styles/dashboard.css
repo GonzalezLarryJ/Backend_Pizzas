@@ -1,0 +1,53 @@
+#dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #ff4500;
+  color: white;
+  padding: 1em 2em;
+}
+
+#dashboard-header .logo {
+  height: 50px;
+}
+
+#dashboard-header h1 {
+  margin: 0;
+  font-size: 3em;
+  padding-left: .3em;
+  font-family: "Roboto Slab", sans-serif;
+}
+
+#dashboard-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  height: calc(100vh - 20vh);
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  margin: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card h2 {
+  margin: 10px 0;
+  font-size: 18px;
+}
