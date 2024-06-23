@@ -25,29 +25,3 @@
   flex-wrap: wrap;
   height: calc(100vh - 20vh);
 }
-
-.card {
-  background-color: white;
-  border-radius: 0.625em;
-  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.1);
-  width: 12.5em;
-  margin: 1.25em;
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.card:hover {
-  transform: translateY(-0.3125em);
-}
-
-.card-img {
-  width: 100%;
-  border-top-left-radius: 0.625em;
-  border-top-right-radius: 0.625em;
-}
-
-.card h2 {
-  margin: 0.625em 0;
-  font-size: 1.125em;
-}
