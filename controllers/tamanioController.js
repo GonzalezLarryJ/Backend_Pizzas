@@ -37,7 +37,7 @@ exports.editTamanio = async(req, res)=>{
         let tamanio = await tamanioService.editTamanio(id, datos);
         res.status(200).send(tamanio);
     } catch (error) {
-        res.status(500).send('No se pudo editar el tamaño', error);
+        res.status(500).send(`No se pudo editar el tamaño ${error}`);
     }
 }
 

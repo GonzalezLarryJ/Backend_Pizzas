@@ -27,7 +27,7 @@ exports.createCliente = async(cliente)=>{
         const {nombre,apellido,direccion,telefono,email,activo,fecha_registro} = cliente;
         const query = 'insert into Cliente (nombre,apellido,direccion,telefono,email,activo,fecha_registro) value (?,?,?,?,?,?,?)';
         const [result]= await pool.query(query,[nombre,apellido,direccion,telefono,email,activo,fecha_registro]);
-        console.log('cliente insrtado correctamente');
+        console.log('cliente insertado correctamente');
         console.log(result);
         return result;
     } catch (error) {

@@ -1,0 +1,44 @@
+### consultar todos los pedidos
+GET http://localhost:3000/api/pedido/
+
+
+
+### consultar todos los pedidos por id
+GET http://localhost:3000/api/pedido/3
+
+
+
+### crear pedidos
+POST http://localhost:3000/api/pedido/
+Content-Type: application/json
+
+{
+    "fecha":"2024-06-23",
+    "cliente_nombre":"para borrar",
+    "telefono":"1150247485",
+    "email":"juan@gmail.com",
+    "direccion":"CABA",
+    "subTotal":25.50,
+    "impuesto":2.41,
+    "total":27.91,
+    "detalle_pedido_Id":2
+}
+
+### editar pedido por Id.
+PUT http://localhost:3000/api/pedido/3
+Content-Type: application/json
+
+{
+    "fecha":"2024-06-23",
+    "cliente_nombre":"cambiado",
+    "telefono":"1150247485",
+    "email":"juan@gmail.com",
+    "direccion":"CABA",
+    "subTotal":25.50,
+    "impuesto":2.41,
+    "total":27.91,
+    "detalle_pedido_Id":2
+}
+
+### Consulta de pedidos
+delete http://localhost:3000/api/pedido/4
