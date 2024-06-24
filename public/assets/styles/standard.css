@@ -1,0 +1,125 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Nav container */
+.nav-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ff4500;
+  padding: 0em 2em;
+}
+
+.navbar-left {
+  display: flex;
+}
+
+.logo-image {
+  height: 4em;
+}
+
+.logo-title {
+  margin: 0;
+  font-size: 3em;
+  padding-left: .3em;
+  font-family: "Roboto Slab", sans-serif;
+  color: #fff;
+}
+
+/* Admin container */
+#admin-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  height: calc(100vh - 20vh);
+}
+
+/* CRUD Body */
+.crud-body {
+  font-family: Arial, sans-serif;
+  background-color: #074990;
+  padding: 1.5em;
+  margin: 0;
+}
+
+/* CRUD Container */
+.crud-container {
+  width: 60vw;
+  padding: 3em;
+  margin: auto;
+  background: #fff;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+}
+
+.crud-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5em;
+}
+
+.crud-tabla,
+.crud-tabla-th,
+.crud-tabla-td {
+  border: 0.1em solid #ddd;
+  padding: 1.2em;
+  text-align: left;
+}
+
+.crud-tabla-th {
+  background-color: #f2f2f2;
+}
+
+/* Cards */
+.card {
+  background-color: white;
+  border-radius: 0.625em;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.1);
+  width: 12.5em;
+  margin: 1.25em;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-0.3125em);
+}
+
+.card-img {
+  width: 100%;
+  border-top-left-radius: 0.625em;
+  border-top-right-radius: 0.625em;
+}
+
+.card h2 {
+  margin: 0.625em 0;
+  font-size: 1.125em;
+}
+
+/* Botones */
+.button {
+  border-radius: 2em;
+  font-size: 1em;
+  padding: 0.6em 1.4em;
+  margin: 2em 0.5em;
+  border: none;
+  color: #ffffff;
+}
+
+#dashboard-btn {
+  font-size: 1.1em;
+  background-color: #2a53ac;
+  color: #ede9e9;
+}
+
+/* Icons */
+.fas {
+  padding-right: 0.3em;
+}
