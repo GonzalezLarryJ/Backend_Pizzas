@@ -9,6 +9,8 @@ const routeTopping = require('./routes/toppingRoutes');
 const routePizza = require('./routes/pizzaRoutes');
 const routeCliente = require('./routes/clienteRoutes');
 const routeRPT = require('./routes/relacion_pizza_toppingRoutes');
+const routePedido = require('./routes/pedidoRoutes');
+const routeDetallePedidos = require('./routes/detallesPedidosRoutes');
 
 //middleware
 const app = express();
@@ -26,7 +28,8 @@ app.use('/api/topping',routeTopping);
 app.use('/api/pizza',routePizza);
 app.use('/api/cliente',routeCliente);
 app.use('/api/relacionPizzaTopping',routeRPT);
-
+app.use('/api/pedido',routePedido);
+app.use('/api/detallePedido', routeDetallePedidos);
 
 app.get('/',(req,res)=>{
     res.send('Hola, mundo...!')

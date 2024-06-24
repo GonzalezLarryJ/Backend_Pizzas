@@ -1,0 +1,28 @@
+### Consulta de los detalles del pedido
+GET http://localhost:3000/api/detallePedido/
+
+
+### Consulta de detalle de pedido por Id.
+get http://localhost:3000/api/detallePedido/1
+
+
+### Crear detalle del pedido
+POST http://localhost:3000/api/detallePedido/
+Content-Type: application/json
+
+{
+    "pizza_id":14,
+    "topping_id":1
+}
+
+### Editar detalle del pedido
+PUT http://localhost:3000/api/detallePedido/1
+Content-Type: application/json
+
+{
+    "pizza_id":1,
+    "topping_id":2  
+}
+
+### Eliminar detalle de pedido
+DELETE http://localhost:3000/api/detallePedido/4
