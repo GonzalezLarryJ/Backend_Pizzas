@@ -1,30 +1,30 @@
-async function fetchTamanios() {
-    try {
-        const response = await fetch('/api/tamanio');
-        if (!response.ok) {
-            throw new Error('Network response was not ok ' + response.statusText);
-        }
-        const tamanios = await response.json();
-        displayTamanios(tamanios);
-    } catch (error) {
-        console.error('Error fetching tamanios:', error);
-    }
-}
+document.addEventListener("DOMContentLoaded", () => {
+  obtenerPizzas();
+});
 
-function displayTamanios(tamanios) {
-    const tamaniosSection = document.getElementById('tamanios');
-    tamaniosSection.innerHTML = '';
-    tamanios.forEach(tamanio => {
-        const tamanioCard = document.createElement('div');
-        tamanioCard.classList.add('card');
-        tamanioCard.innerHTML = `
-            <h3>${tamanio.nombreTam}</h3>
-            <p>${tamanio.descripcionTam}</p>
-            <p>Diametro: ${tamanio.diametro}</p>
-            <img src="${tamanio.imagenTam}" alt="${tamanio.nombreTam}" width="100%">
-        `;
-        tamaniosSection.appendChild(tamanioCard);
+async function obtenerPizzas() {
+  try {
+    const response = await fetch("/api/pizza");
+    const pizzas = await response.json();
+    const indexContainer = document.getElementById("index-container");
+    indexContainer.innerHTML = "";
+
+    pizzas.forEach((pizza) => {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.onclick = () => {
+        window.location.href =
+          "./view/gestionar-pedidos/crear-pedido/crear-pedido.html";
+      };
+      card.innerHTML = `
+        <img src="./assets/images/pizza.jpg" alt="${pizza.Nombre}" class="pizza-img"/>
+        <h2>${pizza.Nombre}</h2>
+        <p>${pizza.Descripcion}</p>
+        <h4>${pizza.Precio}</h4>
+      `;
+      indexContainer.appendChild(card);
     });
+  } catch (error) {
+    console.error("Error fetching pizzas: ", error);
+  }
 }
-
-fetchTamanios();

@@ -1,14 +1,14 @@
 // En factura.js
 document.addEventListener('DOMContentLoaded', async () => {
   try {
-    const urlParams = new URLSearchParams(window.location.search);
-    const pedidoId = urlParams.get('id');
+    // const urlParams = new URLSearchParams(window.location.search);
+    // const pedidoId = urlParams.get('id');
 
-    if (!pedidoId) {
-      throw new Error('ID del pedido no proporcionado');
-    }
+    // if (!pedidoId) {
+    //   throw new Error('ID del pedido no proporcionado');
+    // }
 
-    const response = await fetch(`http://localhost:3000/api/pedido/${pedidoId}`);
+    const response = await fetch(`http://localhost:3000/api/pedido/3`);
     if (!response.ok) {
       throw new Error('Error al obtener los detalles del pedido');
     }

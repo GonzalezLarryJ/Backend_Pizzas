@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./assets/logo.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../assets/styles/standard.css" />
+    <title>PizzARG | Gestionar Pedidos</title>
+  </head>
+  <body>
+    <nav class="nav-container">
+      <div class="navbar-left">
+        <img
+          src="../../assets/logo.ico"
+          alt="PizzARG Logo"
+          class="logo-image"
+        />
+        <h1 class="logo-title">Pizza Codex</h1>
+      </div>
+      <div class="navbar-derecho">
+        <button
+          class="button"
+          id="dashboard-btn"
+          onclick="window.location.href='../../index.html'"
+        >
+          <i class="fas fa-eye"></i> Ver Pizzas
+        </button>
+        <button
+          class="button"
+          id="dashboard-btn"
+          onclick="window.location.href='../gestionar-pizzas/gestionar-pizzas.html'"
+        >
+          <i class="fas fa-cutlery"></i> Gestionar Pizzas
+        </button>
+        <button class="button" id="dashboard-btn">
+          <i class="fas fa-credit-card"></i> Gestionar Pedidos
+        </button>
+        <button
+          class="button"
+          id="dashboard-btn"
+          onclick="window.location.href='../gestionar-pedidos/crear-pedido/index.html'"
+        >
+          <i class="fas fa-bicycle"></i> ¡Haz tu pedido!
+        </button>
+      </div>
+    </nav>
+    <main id="container">
+      <div id="index-container">
+        <div
+          class="card"
+          onclick="window.location.href='./eliminar-pizza/eliminar-pizza.html'"
+        >
+          <img
+            src="../../assets/icons/view.png"
+            alt="Gestionar Toppings"
+            class="card-img"
+          />
+          <h2>Ver Pedidos</h2>
+        </div>
+        <div
+          class="card"
+          onclick="window.location.href='./crear-pizza/crear-pizza.html'"
+        >
+          <img
+            src="../../assets/icons/add.png"
+            alt="Gestionar Pedidos"
+            class="card-img"
+          />
+          <h2>Crear Pedido</h2>
+        </div>
+        <div
+          class="card"
+          onclick="window.location.href='./modificar-pizza/modificar-pizza.html'"
+        >
+          <img
+            src="../../assets/icons/edit.png"
+            alt="Gestionar Medidas"
+            class="card-img"
+          />
+          <h2>Editar Pedidos</h2>
+        </div>
+        <div
+          class="card"
+          onclick="window.location.href='./ver-pizzas/ver-pizzas.html'"
+        >
+          <img
+            src="../../assets/icons/delete.png"
+            alt="Gestionar Toppings"
+            class="card-img"
+          />
+          <h2>Eliminar Pedidos</h2>
+        </div>
+      </div>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>
