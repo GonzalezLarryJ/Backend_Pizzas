@@ -54,3 +54,4 @@ exports.deleteTamanio = async(req, res)=>{
         res.status(500).send('No se pudo eliminar el registro')
     }
 }
+
