@@ -14,16 +14,6 @@ async function obtenerPizzas() {
                 <td class="crud-tabla-td">${pizza.Nombre}</td>
                 <td class="crud-tabla-td">${pizza.Descripcion}</td>
                 <td class="crud-tabla-td">${pizza.Precio}</td>
-                <td class="crud-tabla-td">${obtenerMedidaConID(
-                  pizza.tamanio_id
-                )}</td>
-                <td class="crud-tabla-td">
-                    <button class="table-btn" id="modificar-btn" onclick="window.location.href='../modificar-pizza/modificar-pizza.html?id=${
-                      pizza.idPizza
-                    }'">
-                        <i class="fas fa-pencil"></i> Editar
-                    </button>
-                </td>
             `;
     tableBody.appendChild(row);
   });
