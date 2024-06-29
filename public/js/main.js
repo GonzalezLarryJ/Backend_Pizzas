@@ -22,6 +22,7 @@ function displayTamanios(tamanios) {
             <p>${tamanio.descripcionTam}</p>
             <p>Diametro: ${tamanio.diametro}</p>
             <img src="${tamanio.imagenTam}" alt="${tamanio.nombreTam}" width="100%">
+            <p class="text-center"><strong>Pizza Sizes</strong></p>
         `;
         tamaniosSection.appendChild(tamanioCard);
     });
