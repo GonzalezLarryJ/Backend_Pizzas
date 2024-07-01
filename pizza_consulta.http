@@ -11,26 +11,33 @@ POST http://localhost:3000/api/pizza/
 Content-Type: application/json
 
 {
-    "Imagen":"c:/",
-    "Nombre":"Pizza borrona",
-    "Descripcion":"Pizza de prueba con anchoas",
+    "Imagen":"https://img.freepik.com/foto-gratis/deliciosa-pizza-interior_23-2150873912.jpg",
+    "Nombre":"Pizza margarita",
+    "Descripcion":"Además del origen de su nombre, los ingredientes tradicionales tienen los colores de la bandera del país. El color verde de la albahaca, el queso mozzarella representa el blanco y los tomates son la franja roja.",
     "Precio": 15.84,
     "tamanio_id":2,
     "fecha_creada":"2024-06-21"
 }
 
 ### Editar pizza
-PUT http://localhost:3000/api/pizza/5
+PUT http://localhost:3000/api/pizza/14
 Content-Type: application/json
 
 {
-    "Imagen":"d:/",
-    "Nombre":"Pizza de prueba con anchoas",
-    "Descripcion":"Pizza de prueba",
-    "Precio": 15.99,
-    "tamanio_id":2,
-    "fecha_creada":"2024-06-21"  
+    "Imagen": "https://img.freepik.com/foto-gratis/deliciosa-pizza-interior_23-2150873912.jpg",
+    "Nombre": "Pizza napolitana",
+    "Descripcion": "con una masa más gruesa, sobre todo en los bordes que son un poco esponjosos. Se prepara en un horno de leña y sus ingredientes son similares a los de la pizza margarita.",
+    "Precio": "15.99",
+    "tamanio_id": 2,
+    "fecha_creada": "2024-06-30"
 }
 
 ### borrar pizza por Id
 DELETE http://localhost:3000/api/pizza/7
+
+
+### mostrar consulta con filtro
+get http://localhost:3000/api/pizza/filtros?nombre=a&descripcion=prueba?orden=desc
+
+### mostrar consulta de filtro simple
+get http://localhost:3000/api/pizza/filtros?nombre=&orden=desc

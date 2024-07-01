@@ -55,3 +55,35 @@ exports.deleteTamanio = async(req, res)=>{
     }
 }
 
+exports.filtrado = async (req, res) => {
+        try {
+            console.log(req.query);
+            const { nombre, orden, descripcion } = req.query;
+
+            let consulta = '';
+    
+            if (nombre) {
+                consulta += ' WHERE '
+                consulta += `nombreTam LIKE '%${nombre}%'`;
+            }
+            
+            if (descripcion) {
+                if (consulta) consulta += ' AND ';
+                consulta += `descripcionTam LIKE '%${descripcion}%'`;
+            }
+    
+            // Añadir lógica para ordenar si es necesario
+            if (orden) {
+                consulta += ` ORDER BY nombreTam ${orden === 'desc' ? 'DESC' : 'ASC'}`;
+            }
+            console.log(`esta es la consulta que se recibe en el controller: ${consulta}`);
+            let filtros = await tamanioService.filtado(consulta);
+            
+            res.status(200).json(filtros);
+    
+        } catch (error) {
+            console.log(error);
+            res.status(500).send('No se pudo hacer la consulta filtrada');
+        }
+}
+    

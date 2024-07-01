@@ -2,6 +2,7 @@ const express = require('express');
 const pizzasController = require('../controllers/pizzaController');
 const routePizzas = express.Router();
 
+routePizzas.get('/filtros',pizzasController.filtrado);
 routePizzas.get('/',pizzasController.getPizzas);
 routePizzas.get('/:id',pizzasController.getPizza);
 routePizzas.post('/',pizzasController.createPizza);

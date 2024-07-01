@@ -8,16 +8,19 @@
 <link rel="stylesheet" href="./css/main.css">
 <body>
     <h1 class="text-center"><strong>Pizza Sizes</strong></h1>
+    <h3 class="text-center">Nuestros tamaños de pizzas</h3>
+    <hr>
     <div class="container flex">
         <aside>
             <!-- Aquí puedes agregar contenido adicional, como un menú o filtros -->
             <p>Información de los tamaños de Pizzas</p>
-            <a href="/">Regresar al menu</a>
+            <a href="/">Regresar al catálogo de Pizzas</a>
             <form id="filtroForm">
                 <label for="nombre" class="form-label">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" class="form-control">
                 <label for="orden" class="form-label">Orden:</label>
                 <select id="orden" name="orden" class="form-select">
+                    <option value=" ">ninguno</option>
                     <option value="asc">Ascendente</option>
                     <option value="desc">Descendente</option>
                 </select>

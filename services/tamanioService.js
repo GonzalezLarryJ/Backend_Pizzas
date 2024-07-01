@@ -41,3 +41,21 @@ exports.deleteTamanio =(id)=>{
     }
 }
 
+
+exports.filtado = async (consulta) => {
+        try {
+            console.log(`esta es la consulta que se recibe en el service: ${consulta}`);
+            let query = 'SELECT * FROM Tamanio_Pizza';
+       
+            if (consulta && consulta.trim() !== '') {
+                query += ` ${consulta}`;
+            } 
+
+            const result = await tamanioRepository.filtrado(query);
+            console.log(result);
+            return result;
+        } catch (error) {
+            console.log(error);
+            throw new Error('Error en el servicio de filtrado');
+        }
+}

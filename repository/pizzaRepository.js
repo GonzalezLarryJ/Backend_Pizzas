@@ -56,3 +56,15 @@ exports.deletePizza = async(id)=>{
         console.log(error);
     }
 }
+
+exports.filtrado = async(consulta)=>{
+    try {
+        console.log(consulta);
+        const [result] = await pool.query(consulta);
+        console.log(result);
+        return result;
+    } catch (error) {
+        console.log(error);
+        throw new Error('Error en el repositorio de filtrado');
+    }
+}

@@ -39,3 +39,19 @@ exports.deletePizza = (id)=>{
         console.log('error al borrar la pizza');
     }
 }
+
+exports.filtrado = async (consulta) =>{
+    try {
+        console.log(`esta es la consulta que se recibe en el service: ${consulta}`);
+        let query = 'select * from Pizza ';
+        if (consulta && consulta.trim() !== '') {
+            query += `${consulta}`;
+        }
+        const result = await pizzaRepository.filtrado(query);
+        //console.log(result);
+        return result;
+    } catch (error) {
+        console.log(error);
+        throw new Error('Error en el servicio de filtrado');
+    }
+}

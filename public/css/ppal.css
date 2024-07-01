@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+}
+aside {
+    width: 15%;
+    margin: 15px;
+}
+section {
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        margin: 5px;
+}
+.card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.flex {
+    display: flex;
+}

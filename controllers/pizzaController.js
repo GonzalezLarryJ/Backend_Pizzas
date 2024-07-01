@@ -54,3 +54,28 @@ exports.deletePizza = async(req, res)=>{
         res.status(500).send('error al eliminar registro');
     }
 }
+
+exports.filtrado = async(req, res)=>{
+    try {
+        const { nombre, orden, descripcion } = req.query;
+        let consulta = '';
+        if (nombre) {
+            consulta += ' WHERE ';
+            consulta += `Nombre LIKE '%${nombre}%'`;
+        }
+        if (descripcion) {
+            if (consulta) consulta += ' AND ';
+            consulta += `Descripcion LIKE '%${descripcion}%'`;
+        }
+        if (orden) {
+            consulta += ` ORDER BY Nombre ${orden === 'desc' ? 'DESC' : 'ASC'}`;
+        }
+        console.log(`esta es la consulta que se recibe en el controller: ${consulta}`);
+        let filtros = await pizzaService.filtrado(consulta);
+        res.status(200).json(filtros);
+
+    } catch (error) {
+        console.log(error);
+        res.status(500).send('No se pudo hacer la consulta filtrada')
+    }
+}

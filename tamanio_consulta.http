@@ -30,3 +30,7 @@ Content-Type: application/json
 
 ### Eliminar tamaño de pizza
 DELETE http://localhost:3000/api/tamanio/7
+
+
+### busqueda convinada
+GET http://localhost:3000/api/tamanio/filtros?nombre=pequ
